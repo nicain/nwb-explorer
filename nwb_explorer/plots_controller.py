@@ -13,6 +13,7 @@ import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+from model import ui
 sns.set_style('whitegrid')
 
 
@@ -81,4 +82,10 @@ class PlotsController():
             ax.set_title('roi '+str(cell))
             
         plt.legend(bbox_to_anchor=(1.,1))
+
+
+        fig = analysis.plot2Dnet(showFig=False)
+        if fig==-1:
+            return fig
+        return ui.getSVG(fig)
         return plt

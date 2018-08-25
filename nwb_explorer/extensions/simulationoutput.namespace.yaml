@@ -1,0 +1,6 @@
+namespaces:
+- doc: simulationoutput extensions
+  name: simulationoutput
+  schema:
+  - namespace: core
+  - source: simulationoutput.extensions.yaml

@@ -1,0 +1,61 @@
+groups:
+- datasets:
+  - doc: list of cell ids
+    dtype: int
+    name: gid
+    quantity: '?'
+    shape:
+    - null
+    - 1
+  - attributes:
+    - doc: these are the values
+      dtype: str
+      name: labels
+    doc: indices into values for each gid in order
+    dtype: int
+    name: data
+    shape:
+    - null
+    - 1
+  doc: Categorical Cell Info
+  neurodata_type_def: CatCellInfo
+  neurodata_type_inc: NWBDataInterface
+- attributes:
+  - doc: variable being recorded in the data table
+    dtype: text
+    name: cell_var
+  datasets:
+  - doc: Contiguous multi-cell, multi-compartmental data
+    dtype: float
+    name: data
+    shape:
+    - null
+    - null
+  - doc: list of cell ids
+    dtype: int
+    name: gid
+    quantity: '?'
+    shape:
+    - null
+    - 1
+  - doc: index pointer
+    dtype: uint64
+    name: index_pointer
+    shape:
+    - null
+    - 1
+  - doc: cell compartment ids corresponding to a given column in the data
+    dtype: uint32
+    name: element_id
+    shape:
+    - null
+    - 1
+  - doc: relative position of recording within a given compartment
+    dtype: float
+    name: element_pos
+    shape:
+    - null
+    - 1
+  doc: A spec for storing cell recording variables
+  neurodata_type_def: VarTable
+  neurodata_type_inc: NWBDataInterface

@@ -16,7 +16,7 @@ def load(request):
     if request.method == 'GET':
 
         model_interpreter = NWBModelInterpreter()
-        geppetto_model = model_interpreter.importType('./test_data/ophys_672584839.nwb','','','')
+        geppetto_model = model_interpreter.importType('./test_data/mem_potential_real.nwb','','','')
         serialized_model = GeppettoModelSerializer().serialize(geppetto_model)
         return Response(serialized_model)
     elif request.method == 'POST':
